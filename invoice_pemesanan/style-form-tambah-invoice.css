@@ -1,0 +1,116 @@
+header{
+    margin: auto;
+    margin-left: 40%;
+}
+input[type=text], select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    height: 25%;
+}
+input[type=date]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=number]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=button].riwayatButton{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 35%;
+    margin-top: 10px;
+}
+input[type=button].changeButton{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 1%;
+    margin-top: 10px;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=submit]{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-right: 35%;
+    margin-top: 10px;
+}
+.container{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+.col-75{
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    header{
+        text-align: center;
+        margin: 0;
+    }
+    .col-25, .col-75{
+        width: 100%;
+        margin-top: 0;
+    }
+    input[type=button].riwayatButton{
+        float: left;
+        margin: 0;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    input[type=submit].submitTambah{
+        float: right;
+        margin: 0;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
+}

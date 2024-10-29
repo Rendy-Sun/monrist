@@ -1,0 +1,126 @@
+header{
+    text-align: center;
+    margin-top: 3%;
+}
+.table{
+    font-family:sans-serif;
+    color:#444;
+    border-collapse: collapse;
+    width: 90%;
+    border: 1px solid #f2f5f7;
+    margin: auto;
+    margin-top: 3%;
+}
+.table tr th{
+    background: #35A9DB;
+    color: #fff;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.table, th, td{
+    padding: 8px 20px;
+    text-align: center;
+}
+.table tr:hover{
+    background-color: #f5f5f5;
+}
+.table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+input[type=button].buttonTambah{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 46.5%;
+    margin-top: 2%;
+    position: absolute;
+}
+.buttonField{
+    padding-bottom: 10%;
+}
+.table td{
+    vertical-align: middle;
+}
+.jumlahLabel{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+input[type=date], select, input[type=number]{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=text]{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.row{
+    width: 100%;
+    margin-top: 3%;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.column-1, .column-2{
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+
+}
+.subcolumn-1{
+    float: left;
+    width: 15%;
+    margin-left: 12.5%;
+}
+.subcolumn-2{
+    float: left;
+    width: 25%;
+}
+
+.subcolumn-3{
+    float: left;
+    width: 15%;
+}
+.subcolumn-4{
+    float: right;
+    width: 25%;
+}
+.subcolumn-5{
+    float: right;
+    margin-right: 8.2%;
+    width: 25%;
+    margin-top: -6%;
+}
+.tambahProduk{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+.pencarian{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    
+}

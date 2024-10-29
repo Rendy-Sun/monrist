@@ -1,0 +1,71 @@
+header{
+    margin: auto;
+    text-align: center;
+}
+select{
+    margin-left: 5%;
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=date], input[type=text], input[type=number]{
+    margin-left: 5%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 30%;
+    resize: vertical;
+}
+
+label{
+    margin-left: 65%;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+input[type=submit].submitTambah{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 55%;
+    margin-top: 25px;
+    margin-bottom: 225px;
+    
+}
+.container{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.col-25{
+    float: left;
+    width: 45%;
+    margin-top: 6px;
+}
+.col-75{
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+}
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, label, select, input[type=text],input[type=date]{
+        width: 100%;
+        margin: auto;
+        margin-top: 0;
+    }
+    input[type=submit].submitTambah{
+        margin-top: 10%;
+    }
+}
