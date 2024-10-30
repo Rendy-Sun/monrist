@@ -121,6 +121,28 @@ label{
     border-radius: 4px;
     cursor: pointer;
 }
+.btnPopUp{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    scale: 0.7;
+    margin-right: 16%;
+    margin-bottom: -5%;
+    
+}
+.btnClosePopUp{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
 @media screen and (max-width: 600px) {
     
 }

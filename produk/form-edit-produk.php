@@ -59,6 +59,15 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-25">
+                        <label>Edit Foto Produk </label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" name="nama_produk" required placeholder="https://" value="<?php include("../produk/fetch-data-produk.php"); echo $img_url; ?>">
+                        <a href="<?php echo $img_url;?>" target="_blank"><input type="button" value="Open"></a>
+                    </div>
+                </div>
+                <div class="row">
                     <input type="submit" name="submit" id="tambahSubmit" class="submitTambah" value="Edit"/>
                 </div>
             </div>                    

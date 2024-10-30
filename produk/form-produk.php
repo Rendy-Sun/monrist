@@ -22,6 +22,15 @@ include("../connection/config.php");
         </div>
         <div class="subcolumn-2">
             <input type="text" name="nama_produk" required>
+            <button id="openPopup" class="btnPopUp">Add Image</button>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <input type="text" id="input" name="img_url" placeholder="Paste Image URL Here (Optional)">
+                    <input type="button" id="closePopup" class="btnClosePopUp" value="Add">    
+                </div>
+            </div>
+            <link rel="stylesheet" href="../produk/style-pop-up.css">
+            <script src="../produk/script-pop-up.js"></script>
         </div>
         <div class="subcolumn-3">
             <label>Harga Produk</label>
@@ -36,7 +45,7 @@ include("../connection/config.php");
         </div>
         <div class="subcolumn-2">
             <select name="unit_produk" required>
-                <option hidden>Pilih Unit Produk</option>
+                <option value ="" hidden>Pilih Unit Produk</option>
                 <?php
                     $query2 = "SELECT nama_unit FROM unit";
                     $result2 = $dbConnection->query($query2);
@@ -61,6 +70,7 @@ include("../connection/config.php");
             <thead>
                 <tr>
                     <th>No</th>
+                    <th>Foto Produk</th>
                     <th>Nama Produk</th>
                     <th>Harga Per Unit</th>
                     <th>Stok</th>
@@ -84,7 +94,7 @@ include("../connection/config.php");
                         $jumlah_data = mysqli_num_rows($data);
                         $total_halaman = ceil($jumlah_data/$batas);
     
-                        $query = "SELECT nama_produk, harga, nama_unit, produk.id AS id_produk, stok FROM produk INNER JOIN unit ON unit.id = produk.unit_id LIMIT $halaman_awal, $batas";
+                        $query = "SELECT nama_produk, harga, nama_unit, produk.id AS id_produk, stok, img_url FROM produk INNER JOIN unit ON unit.id = produk.unit_id LIMIT $halaman_awal, $batas";
                         $data_produk = mysqli_query($dbConnection, $query);
                         $nomor = $halaman_awal+1; 
                     }else if($pencarian !=null){
@@ -93,7 +103,7 @@ include("../connection/config.php");
                         $jumlah_data = mysqli_num_rows($data);
                         $total_halaman = ceil($jumlah_data/$batas);
     
-                        $query = "SELECT nama_produk, harga, nama_unit, produk.id AS id_produk, stok FROM produk INNER JOIN unit ON unit.id = produk.unit_id WHERE nama_produk LIKE '%".$pencarian."%' LIMIT $halaman_awal, $batas";
+                        $query = "SELECT nama_produk, harga, nama_unit, produk.id AS id_produk, stok, img_url FROM produk INNER JOIN unit ON unit.id = produk.unit_id WHERE nama_produk LIKE '%".$pencarian."%' LIMIT $halaman_awal, $batas";
                         $data_produk = mysqli_query($dbConnection, $query);
                         $nomor = $halaman_awal+1; 
                     }
@@ -105,9 +115,11 @@ include("../connection/config.php");
                     
                     while($row_data = mysqli_fetch_array($data_produk)){
                         $noUrut++;
+                        $img = $row_data['img_url'];
                         $harga_produk = number_format($row_data["harga"],0,'','.');
                         echo "<tr>";
                         echo "<td>". $noUrut."</td>";
+                        echo "<td><a href='$img'><img src='$img' width='100' height='100'></a></td>";
                         echo "<td>". $row_data["nama_produk"] ."</td>";
                         echo "<td>Rp ". $harga_produk ."</td>";
                         echo "<td>". $row_data["stok"] ."</td>";
